@@ -3,49 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nutriwise – Nutrition & Supplements</title>
+  <title>Nutriwisdom – Nutrition & Wellness</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    :root {
+      --primary: #2e7d32;
+      --accent: #81c784;
+      --bg: #f5f5f5;
+      --text: #333;
+      --font: 'Segoe UI', sans-serif;
+    }
+    * {
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
-      color: #333;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: var(--font);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
     header {
-      background: #4CAF50;
+      background-color: var(--primary);
       color: white;
-      padding: 1em;
+      padding: 1.5em;
       text-align: center;
     }
+    nav {
+      margin-top: 1em;
+    }
     nav a {
-      margin: 0 1em;
       color: white;
+      margin: 0 1em;
       text-decoration: none;
       font-weight: bold;
     }
     main {
       padding: 2em;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
     }
+    h1, h2 {
+      margin-bottom: 0.5em;
+    }
+    .cta {
+      background-color: var(--accent);
+      color: white;
+      padding: 1em;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 1em;
+    }
+    .tip {
+      margin-top: 1em;
+      font-style: italic;
+      color: #555;
+    }
     footer {
-      background: #eee;
+      background-color: #ddd;
       text-align: center;
       padding: 1em;
+      margin-top: 3em;
       font-size: 0.9em;
-      margin-top: 2em;
-    }
-    .quote {
-      font-style: italic;
-      color: #666;
-      margin-top: 1em;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Nutriwise</h1>
+    <h1>Nutriwisdom</h1>
+    <p>Your trusted source for nutrition, supplements, and wellness tips.</p>
     <nav>
       <a href="index.html">Home</a>
       <a href="blog/index.html">Blog</a>
@@ -54,26 +82,26 @@
     </nav>
   </header>
   <main>
-    <h2>Welcome to Nutriwise</h2>
-    <p>Your daily dose of nutrition tips, supplement insights, and healthy living advice.</p>
-    <button onclick="showQuote()">Get a health tip</button>
-    <p class="quote" id="quote"></p>
+    <h2>Welcome to Nutriwisdom</h2>
+    <p>We deliver science-backed insights and daily tips to help you live a healthier, more energized life.</p>
+    <button class="cta" onclick="showTip()">Get a Wellness Tip</button>
+    <p class="tip" id="tip"></p>
   </main>
   <footer>
-    <p>© 2025 Nutriwise. All rights reserved.</p>
+    <p>© 2025 Nutriwisdom. All rights reserved.</p>
   </footer>
 
   <script>
     const tips = [
-      "Drink a glass of water first thing in the morning.",
-      "Magnesium helps regulate sleep and muscle function.",
-      "Omega-3 fatty acids support heart and brain health.",
-      "Eat colorful vegetables for a variety of nutrients.",
-      "Vitamin D is essential for immune support."
+      "Start your day with a protein-rich breakfast.",
+      "Magnesium supports muscle recovery and sleep quality.",
+      "Stay hydrated — aim for 2 liters of water daily.",
+      "Omega-3s help reduce inflammation and support brain health.",
+      "Take a 10-minute walk after meals to aid digestion."
     ];
-    function showQuote() {
-      const randomTip = tips[Math.floor(Math.random() * tips.length)];
-      document.getElementById("quote").textContent = randomTip;
+    function showTip() {
+      const tip = tips[Math.floor(Math.random() * tips.length)];
+      document.getElementById("tip").textContent = tip;
     }
   </script>
 </body>
