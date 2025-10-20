@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nutriwise – Nutrition & Supplements</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 1em;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+    footer {
+      background: #eee;
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+      margin-top: 2em;
+    }
+    .quote {
+      font-style: italic;
+      color: #666;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nutriwise</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Welcome to Nutriwise</h2>
+    <p>Your daily dose of nutrition tips, supplement insights, and healthy living advice.</p>
+    <button onclick="showQuote()">Get a health tip</button>
+    <p class="quote" id="quote"></p>
+  </main>
+  <footer>
+    <p>© 2025 Nutriwise. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const tips = [
+      "Drink a glass of water first thing in the morning.",
+      "Magnesium helps regulate sleep and muscle function.",
+      "Omega-3 fatty acids support heart and brain health.",
+      "Eat colorful vegetables for a variety of nutrients.",
+      "Vitamin D is essential for immune support."
+    ];
+    function showQuote() {
+      const randomTip = tips[Math.floor(Math.random() * tips.length)];
+      document.getElementById("quote").textContent = randomTip;
+    }
+  </script>
+</body>
+</html>
